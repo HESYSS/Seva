@@ -1,0 +1,185 @@
+/* Стили для боковой панели */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right:  -250px; /* Скрываем боковую панель за левым краем экрана */
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+    background-color: #333;
+    transition:  right 0.3s ease; /* Плавное анимированное изменение при выезде/уезде */
+    z-index: 5;
+}
+.sidebar1 {
+    position: fixed;
+    top: 0;
+    right:  -200px; /* Скрываем боковую панель за левым краем экрана */
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    transition:  left 0.3s ease; /* Плавное анимированное изменение при выезде/уезде */
+    z-index: 5;
+}
+
+.sidebar.open {
+    left: 0; /* Открываем боковую панель */
+}
+.sidebar1.open1 {
+    right: 0; /* Открываем боковую панель */
+}
+.container {
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: #33333300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 4; /* Чтобы кнопка была над боковой панелью */
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.container1 {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: #33333300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 4; /* Чтобы кнопка была над боковой панелью */
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+.hidden1 {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+.close{
+    position: relative;
+    left: 225px;
+    background-color: #33333300;
+}
+.close1{
+    background-color: #33333300;
+}
+
+.image-container {
+    position: relative; /* Позиционируем, чтобы абсолютно позиционированные элементы относились к этому контейнеру */
+    overflow: hidden; /* Обрезаем изображение, которое выходит за границы контейнера */
+    width: 100%; /* Установите ширину контейнера в зависимости от вашего изображения */
+    height: auto; /* Установите высоту контейнера в зависимости от вашего изображения */
+}
+
+/* Стили для изображения */
+#zoom-image {
+    width: 100%; /* Заполните контейнер шириной */
+    height: 100%; /* Заполните контейнер высотой */
+    cursor: pointer; /* Изменяем курсор при наведении на изображение */
+    transition: transform 0.3s ease; /* Плавный переход при изменении масштаба */
+}
+
+/* Стили для псевдоэлемента, который создает сетку */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px; /* Размер ячеек сетки */
+}
+
+.InitiativeList{
+    position: absolute;
+    text-align: center;
+}
+.InitiativeList > .rhombus {
+    margin-bottom: 10px; /* Отступ между элементами */
+}
+.InitiativeList > .square {
+    margin-bottom: 10px;
+    
+}
+.InitiativeList > .hero {
+    margin-bottom: 10px;
+    
+}
+
+.hero-marker {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10;
+    left: 10px;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    line-height: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.rhombus {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transform: rotate(-135deg); /* Поворачиваем элемент на 45 градусов */
+    z-index: 10;
+}
+.square {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    z-index: 10;
+}
+.oval {
+    width: 10px;
+    height: 15px;
+    border-radius: 50%; /* Задаем радиус, чтобы создать овальную форму */
+}
+.progress-bar {
+    width: 0%;
+    height: 15px;
+    background-color: black; /* Исходный цвет объекта */
+    transition: width 1s, background-color 1s; /* Добавляем анимацию */
+    z-index: 2;
+}
+
+
+
+
+
+
+.kostyl{
+    position: absolute;
+    left: 50%;
+    
+    width: 50px;
+    height: 100%;
+}

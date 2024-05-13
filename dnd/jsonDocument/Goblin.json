@@ -1,0 +1,570 @@
+{
+  "_id": "hhiRYbmXDN3unik7",
+  "name": "Гоблин [Goblin]",
+  "type": "npc",
+  "img": "https://img.ttg.club/tokens/round/goblin.webp",
+  "items": [
+    {
+      "_id": "6t9pQvZ73qwtpeO4",
+      "name": "Скимитар",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-katana.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\"><em>Атака оружием в ближнем бою</em>: [[/r 1d20+4]] (<strong>+4</strong>)<strong> к броску, зона досягаемости 5 футов</strong>, одна цель.</div>\n<div class=\"rd__spc-inline-post\"><em>Попадание</em>: <strong>5</strong> ([[/r 1d6 + 2]]) <strong>режущего урона</strong>.&nbsp;</div>\n</section>\n<div class=\"rd__spc-inline-post\">Гоблин атакует скимитаром!</div>\n</div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "MM",
+        "quantity": 1,
+        "weight": 3,
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "",
+        "identified": false,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 5,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": "",
+          "per": "",
+          "recovery": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "dex",
+        "actionType": "mwak",
+        "attackBonus": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d6 + @mod",
+              "slashing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "martialM",
+        "baseItem": "",
+        "properties": {
+          "fin": true,
+          "lgt": true,
+          "ada": false,
+          "amm": false,
+          "ret": false,
+          "two": false,
+          "rch": false,
+          "lod": false,
+          "mgc": false,
+          "thr": false,
+          "fir": false,
+          "spc": false,
+          "rel": false,
+          "ver": false,
+          "sil": false,
+          "hvy": false,
+          "foc": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "eeksRgDQUsKLotus",
+      "name": "Короткий лук",
+      "type": "weapon",
+      "img": "icons/weapons/bows/shortbow-recurve.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\"><em>Дистанционная атака оружием</em>: [[/r 1d20+4]] (<strong>+4</strong>)<strong> к броску, дистанция 80/320 футов</strong>, одна цель.</div>\n<div class=\"rd__spc-inline-post\"><em>Попадание:</em> <strong>5</strong> ([[/r 1d6 + 2]]) <strong>колющего урона</strong>.</div>\n</section>\n<div class=\"rd__spc-inline-post\">Гоблин стреляет из лука!</div>\n</div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "MM",
+        "quantity": 1,
+        "weight": 2,
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "",
+        "identified": false,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 80,
+          "long": 320,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": "",
+          "per": "",
+          "recovery": ""
+        },
+        "consume": {
+          "type": "ammo",
+          "target": "diLiKMC0y0A4KN1v",
+          "amount": 1
+        },
+        "ability": "dex",
+        "actionType": "rwak",
+        "attackBonus": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d6 + @mod",
+              "piercing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "simpleR",
+        "baseItem": "",
+        "properties": {
+          "amm": true,
+          "two": true,
+          "ada": false,
+          "ret": false,
+          "rch": false,
+          "lod": false,
+          "lgt": false,
+          "mgc": false,
+          "thr": false,
+          "fir": false,
+          "spc": false,
+          "rel": false,
+          "ver": false,
+          "sil": false,
+          "hvy": false,
+          "fin": false,
+          "foc": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "lq4Uk6PzjZ8SXv4j",
+      "name": "Проворное бегство",
+      "type": "feat",
+      "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">В качестве бонусного действия гоблин может совершить действие @Compendium[laaru-dnd5-hw.actions.H9TgqPZGVRUQY4GF]{Засада} или @Compendium[laaru-dnd5-hw.actions.NwKMv5Ljen62a44Y]{Отступление} в любой свой ход.</div>\n</div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "MM",
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": "",
+          "per": "",
+          "recovery": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 0
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "featType": "",
+        "prerequisites": "",
+        "granted": "",
+        "usage": {
+          "type": "atWill"
+        },
+        "actionCost": 0,
+        "targetEffect": "",
+        "scaling": {
+          "mode": "",
+          "formula": ""
+        },
+        "active": true,
+        "level": 0,
+        "activationTime": ""
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    }
+  ],
+  "sort": 12000,
+  "flags": {
+    "favtab": {
+      "category": "npc"
+    },
+    "advancedFilter": {
+      "isQuick": true
+    }
+  },
+  "tokenImg": "https://img.ttg.club/tokens/round/goblin.webp",
+  "effects": [],
+  "folder": null,
+  "sortName": "",
+  "data.flags.token": {},
+  "permission": {
+    "default": 0,
+    "5xzZmOc0eskDU5fw": 3
+  },
+  "items.6t9pQvZ73qwtpeO4.effects": [],
+  "items.eeksRgDQUsKLotus.effects": [],
+  "items.lq4Uk6PzjZ8SXv4j.effects": [],
+  "items.-zvIHekbVJQ5gVZx.effects": [],
+  "width": 1,
+  "height": 1,
+  "scale": 1,
+  "rotation": 0,
+  "bar1": {
+    "attribute": "attributes.hp",
+    "value": 7,
+    "max": 7,
+    "visible": true
+  },
+  "bar2": {
+    "attribute": "",
+    "value": "",
+    "max": "",
+    "visible": false
+  },
+  "actorData": {
+    "type": "npc",
+    "details": {
+      "type": "",
+      "alignment": "нейтральное зло",
+      "cr": "0.25"
+    },
+    "traits": {
+      "size": "Маленький",
+      "di": "",
+      "dr": "",
+      "ci": "",
+      "dv": "",
+      "damvuln": "",
+      "conds": ""
+    },
+    "attributes": {
+      "ac": {
+        "value": 15,
+        "calculation": ""
+      },
+      "hp": {
+        "value": 7,
+        "max": 7,
+        "calculation": ""
+      },
+      "speed": {
+        "value": "30 фт."
+      },
+      "str": {
+        "value": 8,
+        "mod": -1
+      },
+      "dex": {
+        "value": 14,
+        "mod": 2
+      },
+      "con": {
+        "value": 10,
+        "mod": 0
+      },
+      "int": {
+        "value": 10,
+        "mod": 0
+      },
+      "wis": {
+        "value": 8,
+        "mod": -1
+      },
+      "cha": {
+        "value": 8,
+        "mod": -1
+      }
+    }
+  },
+  "items.-zvIHekbVJQ5gVZx": {
+    "name": "",
+    "type": "spell",
+    "data": {},
+    "img": "icons/spells/enhancements/concentration/spell-speed.webp"
+  }
+}
+

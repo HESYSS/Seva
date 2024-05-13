@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hero Element</title>
+<style>
+  .rhombus {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transform: rotate(45deg); /* Поворачиваем элемент на 45 градусов */
+  }
+  .InitiativeList > .rhombus {
+    margin-bottom: 10px; /* Отступ между элементами */
+  }
+  .hero-marker {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-50%, -50%);
+  }
+  .progress-bar {
+            width: 0%;
+            height: 15px;
+            background-color: black; /* Исходный цвет объекта */
+            transition: width 1s, background-color 1s; /* Добавляем анимацию */
+            z-index: 2;
+        }
+</style>
+</head>
+<body>
+
+  <button id="addButton">Добавить элемент</button>
+  <button id="deleteButton" disabled>Удалить элемент</button>
+  <input id="dexterityAdd" maxlength="2" pattern="\d{1,2}">
+  <button onclick="goToNextElement()">Следующий элемент</button>
+  <button onclick="dexterityAdd(elementsContainer)">OK</button>
+  <button onclick="createHero()">Создать hero-marker</button>
+  <button onclick="moveHero()">Переместить hero-marker</button>
+  <input id="pipa"><button onclick="tt()">OK</button>
+  <div>sdfds</div>
+  <div id="InitiativeList" class="InitiativeList"></div>
+
+  <div>sdfds</div>
+  <div id="elementsContainer"></div> <!-- Контейнер для новых элементов -->
+
+  <script>
+    const addButton = document.getElementById('addButton');
+    const deleteButton = document.getElementById('deleteButton');
+    const InitiativeList = document.getElementById('InitiativeList');
+    const elementsContainer = document.getElementById('elementsContainer'); // Получаем контейнер
+    let selectedElement = null;
+    let isElementDragging = false;
+    let dexterity = 0;
+    var currentIndex = 0; // Индекс текущего элемента div
+    var heroMarker;
+
+
+
+    function dexterityAdd() {
+      dexterity = document.getElementById('dexterityAdd').value;
+    }
+
+    function tt(){
+
+a = document.getElementById('pipa').value;
+var hp = 0;
+if (a.indexOf('к') != -1){
+n = Number(a.slice(0,a.indexOf('к')))
+var k = 0 
+if (a.indexOf("+") != -1 || a.indexOf("-") != -1){
+    k = Number(a.slice(a.indexOf('к')+1,a.indexOf(' ')))
+    f = a.indexOf(' ')
+    a = a.replaceAll(" ","")
+    m = Number(a.slice(f,a.length))
+} else{
+    k = Number(a.slice(a.indexOf('к')+1,a.length))
+    m = 0
+}
+
+
+for(let i = 0; i<n; i++){
+    hp += Math.floor(Math.random() * k) + 1 
+}
+hp += m
+}
+else{
+    hp = Number(a)
+}
+
+return hp;
+}
+
+    addButton.addEventListener('click', () => {
+      const newElement = document.createElement('div');
+      const StateElement = document.createElement('div');
+      newElement.classList.add('rhombus');
+      StateElement.classList.add('rhombus');
+      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+      newElement.style.backgroundColor = randomColor;
+
+      StateElement.style.backgroundColor = newElement.style.backgroundColor;
+
+      newElement.Hp = tt()
+      StateElement.Hp = newElement.Hp
+      const Initiative = Math.floor(Math.random() * 20) + 1 + Number(dexterity);
+      StateElement.Initiative = Initiative;
+
+      const innerElement = document.createElement('div');
+      innerElement.classList.add('progress-bar');
+    
+    // Добавляем внутренний элемент в новый элемент
+    newElement.appendChild(innerElement);
+
+
+      const addButtonRect = addButton.getBoundingClientRect();
+
+      newElement.style.position = 'absolute';
+      newElement.style.left = addButtonRect.left + 'px';
+      newElement.style.top = addButtonRect.bottom + 'px';
+
+      elementsContainer.appendChild(newElement); // Добавляем элемент в контейнер
+
+      let offsetX, offsetY, isDragging = false; // Объявляем переменную isDragging
+
+      // Добавляем новый StateElement в соответствующее место в списке InitiativeList
+      addStateElement(StateElement);
+      
+      // Сохраняем ссылку на соответствующий StateElement внутри newElement
+      newElement.dataset.stateElementId = StateElement.dataset.stateElementId = Date.now();
+
+      newElement.addEventListener('click', () => {
+        if (isElementDragging) {
+          const inputValue = prompt('Нанесенный урон');
+          if (inputValue !== null) {
+           if (newElement.Hp - inputValue <= 0){
+            newElement.style.backgroundColor = "Black";
+            StateElement.style.backgroundColor = newElement.style.backgroundColor;
+
+            setTimeout(deleteButton.dispatchEvent(new Event("click")), 60*1000) 
+           }
+           else{
+            
+           }
+        }
+
+
+
+          
+        }
+      });
+
+      newElement.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        isElementDragging = true
+        offsetX = e.clientX - newElement.getBoundingClientRect().left;
+        offsetY = e.clientY - newElement.getBoundingClientRect().top;
+        selectedElement = newElement;
+        deleteButton.removeAttribute('disabled');
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          const x = e.clientX - offsetX;
+          const y = e.clientY - offsetY;
+
+          newElement.style.left = `${x}px`;
+          newElement.style.top = `${y}px`;
+        }
+        isElementDragging = false
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      
+    });
+
+    deleteButton.addEventListener('click', () => {
+      if (selectedElement) {
+        const stateElementId = selectedElement.dataset.stateElementId;
+        const stateElement = document.querySelector(`[data-state-element-id='${stateElementId}']`);
+        
+        if (stateElement) {
+          stateElement.parentNode.removeChild(stateElement);
+        }
+        selectedElement.parentNode.removeChild(selectedElement);
+        selectedElement = null;
+        deleteButton.setAttribute('disabled', 'true');
+      }
+      
+    });
+
+  </script>
+  <div>sdfds2</div>
+
+  <script src="InitiativeSort.js"></script>
+</body>
+</html>

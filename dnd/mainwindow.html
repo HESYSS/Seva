@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="hidden" id="hoverButton"></button>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <button class="close" onclick="closeSidebar()">x</button>
+        <h3 style="color: azure;">Герои</h3>
+        <div>
+            <button id="addButton">добавить</button>
+            <button id="deleteButton" disabled>удолить</button>
+            <div style="color: azure;">Иницифтива</div>
+            <input id="dexterityAdd" style="width: 10;" maxlength="2" pattern="\d{1,2}">
+        </div>
+        <h3 style="color: azure;">Враги</h3>
+        <div>
+            <p class="rhombus" style="background-color: aqua;"></p>
+            <button id="addButtonRhombus">добавить</button>
+            <button id="deleteButtonRhombus" disabled>удолить</button>
+            <div style="color: azure;">Иницифтива</div>
+            <input id="dexterityRhombusAdd" style="width: 10;" maxlength="2" pattern="\d{1,2}">
+            <button onclick="dexterityRhombusAdd()">OK</button>
+            <div style="color: azure;">HP</div>
+            <input id="rhombushp">
+        </div>
+        <div>
+            <p class="square" style="background-color: aqua;"></p>
+            <button id="addButtonSquare">добавить</button>
+            <button id="deleteButtonSquare" disabled>удолить</button>
+            <div style="color: azure;">Иницифтива</div>
+            <input id="dexteritySquareAdd" style="width: 10;" maxlength="2" pattern="\d{1,2}">
+            <button onclick="dexteritySquareAdd()">OK</button>
+            <div style="color: azure;">HP</div>
+            <input id="squarehp">
+        </div>
+        <div>
+            <p class="oval" style="background-color: aqua;"></p>
+            <button id="addButtonOval">добавить</button>
+            <button id="deleteButtonOval" disabled>удолить</button>
+            <div style="color: azure;">Иницифтива</div>
+            <input id="dexterityOvalAdd" style="width: 10;" maxlength="2" pattern="\d{1,2}">
+            <button onclick="dexterityOvalAdd()">OK</button>
+            <div style="color: azure;">HP</div>
+            <input id="ovalhp">
+        </div>
+        <div>
+            <p class="oval" style="background-color: aqua;"></p>
+            <button id="addButtonHero">добавить</button>
+            <button id="deleteButtonHero" disabled>удолить</button>
+            <div style="color: azure;">Иницифтива</div>
+            <input id="dexterityHeroAdd" style="width: 10;" maxlength="2" pattern="\d{1,2}">
+           
+            <div style="color: azure;">HP</div>
+            <input id="ovalhp">
+        </div>
+        
+    </div>
+    <div class="container1">
+        <button class="hidden1" id="hoverButton1"></button>
+    </div>
+    <div class="sidebar1" id="sidebar1">
+        <button class="close1" onclick="closeSidebar1()">x</button>
+        <button onclick="moveHero()">Закончить ход</button>
+        <h3 style="text-align: center; color: azure;">Иницифтива</h3>
+        <div class="kostyl">
+        <div id="InitiativeList" class="InitiativeList"></div>
+        </div>
+    </div>
+    
+    
+        <div class="image-container" id="image-container">
+        <img src="uploads/photo_2024-02-29_19-14-31.jpg" id="zoom-image" alt="Your Image">
+         <div class="grid-overlay"></div>
+    
+    </div>
+    <div id="elementsContainer"></div>
+    
+
+    <script src="rin.js"></script>
+    <script src="Hero.js"></script>
+    <script src="rhombus.js"></script>
+    <script src="square.js"></script>
+    <script src="oval.js"></script>
+    <script  src="allEnemis.js"></script>
+    <script src="InitiativeSort.js"></script>
+    <script src="scriptsLeft.js"></script>
+    <script src="scriptsRight.js"></script>
+    <script src="zoom.js"></script>
+</body>
+</html>

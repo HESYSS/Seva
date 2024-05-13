@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <style>
+        .hero {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    line-height: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+    </style>
+       
+</head>
+<body>
+    <header></header> <!-- Добавляем элемент header -->
+    
+    <section></section>
+    "Гоблин может в каждом своём ходу <em>бонусным действием</em> совершать действие <detail-tooltip type=\"screen\"><a href=\"https://ttg.club//screens/hide\">Засада</a></detail-tooltip> или <detail-tooltip type=\"screen\"><a href=\"https://ttg.club//screens/disengage\">Отход</a></detail-tooltip>."
+
+    <script>
+        var requestURL = 'http://localhost:3000/Kobold';
+        var request = new XMLHttpRequest();
+        request.open("GET", requestURL);
+        request.responseType = "json";
+        request.send();
+        request.onload = function () {
+            var superHeroes = request.response;
+            populateHeader(superHeroes);
+            populateSection(superHeroes);
+        };
+
+        function populateHeader(jsonObj) {
+            var header = document.querySelector("header");
+            var myH1 = document.createElement('img');
+            myH1.classList.add('hero')
+            myH1.src = jsonObj["img"];
+            alert(myH1.textContent)
+            header.appendChild(myH1);
+        }
+
+        function populateSection(jsonObj) {
+            var section = document.querySelector("section");
+            populateObject(jsonObj, section);
+        }
+
+        function populateObject(obj, container) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    var value = obj[key];
+                    var myPara = document.createElement("p");
+                    if (typeof value === "object") {
+                        // Если значение является объектом, вызываем функцию populateObject рекурсивно
+                        var subContainer = document.createElement("div");
+                        myPara.textContent = key + ": ";
+                        populateObject(value, subContainer);
+                        myPara.appendChild(subContainer);
+                    } else {
+                        // Если значение не является объектом, выводим его напрямую
+                        myPara.textContent = key + ": " + value;
+                    }
+                    container.appendChild(myPara);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
